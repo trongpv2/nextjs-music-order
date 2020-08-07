@@ -1,0 +1,88 @@
+.content {
+    background: url('/images/background.jpg');
+    padding-bottom: 230px;
+}
+#formInput {
+    border-radius: 30px;
+    background-color: #ddd;
+}
+Label {
+    font-weight: bold;
+}
+.vld {
+    color:red;
+}
+#jumbotron, Button {
+    margin-right: 45%;
+}
+ButtonToggle {
+    margin-left: 100px;
+}
+.box-music {
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 15px;
+    min-height: 230px;
+}
+.thumbnail {
+    width: 100%;
+    min-height: 160px;
+    border-radius: 5px;
+}
+.rightInfo {
+    float: right;
+    top: 0;
+}
+.btnSubmit {
+    margin-left: 40%;
+}
+.header-form {
+    text-align: center;
+    font-size:30pt;
+
+}
+.box-music {
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+.box-time {
+    float: right;
+    margin-right: 35px;
+    background-color: #333;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.box-title, a {
+    background-color: #333;
+    color: #fff;
+    padding: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 100%;
+    font-size: 17pt;
+}
+.box-title:hover {
+    cursor: pointer;
+}
+a:hover {
+    text-decoration: none;
+    color: #808080;
+}
+.box-infor {
+    margin-top: 5px;
+}
+.short-mess {
+    font-size: 15px;
+    display: inline-block;
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+.errorMessage {
+    color: red;
+    /* font-weight: bold; */
+    padding-left: 5px;
+}
