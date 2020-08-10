@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import { Jumbotron, Container, Row, Col } from 'reactstrap';
-import Form1 from './Form1';
+import React, { useEffect } from 'react';
+import { Row, Col, Card } from 'antd';
+import Form2 from './Form2';
 import List from './List';
 import Head from 'next/head';
 
@@ -15,19 +15,17 @@ const IndexPosts = (props) => {
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
             </Head>
-            <Jumbotron className="content">
-                <Row>
-                    <Col lg="1" md="1" xs="12" sm="12"></Col>
-                    <Col lg="3" md="3" xs="12" sm="12">
-                        <Container>
-                            <Form1 />
-                        </Container>
+            <Card>
+                <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                    <Col className="gutter-row" span={3}></Col>
+                    <Col className="gutter-row" span={6}>
+                        <Form2 />
                     </Col>
-                    <Col lg="7" md="7" xs="12" sm="12">
+                    <Col className="gutter-row" span={12}>
                         <List posts={props.posts} />
                     </Col>
                 </Row>
-            </Jumbotron>
+            </Card>
         </>
     );
 }

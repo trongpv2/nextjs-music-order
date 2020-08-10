@@ -1,3 +1,4 @@
+
 .content {
     background: url('/images/background.jpg');
     padding-bottom: 230px;
@@ -12,12 +13,6 @@ Label {
 .vld {
     color:red;
 }
-#jumbotron, Button {
-    margin-right: 45%;
-}
-ButtonToggle {
-    margin-left: 100px;
-}
 .box-music {
     background-color: #ddd;
     padding: 10px;
@@ -29,20 +24,13 @@ ButtonToggle {
     min-height: 160px;
     border-radius: 5px;
 }
-.rightInfo {
-    float: right;
-    top: 0;
-}
-.btnSubmit {
-    margin-left: 40%;
-}
 .header-form {
     text-align: center;
     font-size:30pt;
 
 }
 .box-music {
-    margin-left: 100px;
+    /* margin-left: 100px; */
     margin-bottom: 20px;
 }
 .box-time {
@@ -85,4 +73,7 @@ a:hover {
     color: red;
     /* font-weight: bold; */
     padding-left: 5px;
+}
+.row {
+    padding-left: 10%;
 }

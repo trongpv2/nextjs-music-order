@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Col, Row, Card } from 'reactstrap';
+import { Col, Row } from 'antd';
 import FormatDate from './FormatDate';
 import imgDefault from '../../assets/music.png';
 import Modal from './Modal';
@@ -9,33 +9,27 @@ function List({ posts }) {
         <div>
             {posts.map((post, index) => (
                 <div className="box-music" key={index}>
-                    <Row>
-                        <Container>
-                            <Row>
-                                <Col lg={3} md={4} sm={6} sx={6}>
-                                    <Card>
-                                        <ModalImage post={post} />
-                                    </Card>
-                                </Col>
-                                <Col lg={9} md={8} sm={6} sx={6}>
-                                    <div className="box-title">
-                                        <ModalName post={post} />
-                                    </div>
-                                    <div className="box-infor">
-                                        <p><span className="from-to">Do </span><b>{post.sender ? post.sender : "Ẩn danh"} </b><span className="from-to">gửi đến </span><b>{post.receiver ? post.receiver : "Ai đó"}</b></p>
-                                    </div>
-                                    <div className="box-mess">
-                                        <span><i className="fa fa-envelope"></i>Với lời nhắn...</span><br />
-                                        <span className="short-mess"><span className="mess">{post.message}</span></span>
-                                    </div>
-                                </Col>
-                            </Row>
-                            <Row className="box-time">
-                                <i><FormatDate date={post.time} /></i>
-                            </Row>
-                            <Modal post={post} />
-                        </Container>
+                    <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                        <Col className="gutter-row" span={6}>
+                            <ModalImage post={post} />
+                        </Col>
+                        <Col className="gutter-row" span={18}>
+                            <div className="box-title">
+                                <ModalName post={post} />
+                            </div>
+                            <div className="box-infor">
+                                <p><span className="from-to">Do </span><b>{post.sender ? post.sender : "Ẩn danh"} </b><span className="from-to">gửi đến </span><b>{post.receiver ? post.receiver : "Ai đó"}</b></p>
+                            </div>
+                            <div className="box-mess">
+                                <span><i className="fa fa-envelope"></i>Với lời nhắn...</span><br />
+                                <span className="short-mess"><span className="mess">{post.message}</span></span>
+                            </div>
+                        </Col>
                     </Row>
+                    <Row className="box-time">
+                        <i><FormatDate date={post.time} /></i>
+                    </Row>
+                    <Modal post={post} />
                 </div>
             ))}
         </div>
